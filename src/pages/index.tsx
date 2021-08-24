@@ -3,6 +3,7 @@ import RenderFile from "@components/RenderFile";
 import { useState } from "react";
 import axios from "axios";
 import DownloadFile from "@components/DownloadFile";
+import EmailForm from "@components/EmailForm";
 
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
       const {data}  = await axios ({
         method:"post",
         data :formData,
-        url:"http://localhost:5000/api/files/upload",
+        url:`${process.env.NEXT_PUBLIC_API}/api/files/upload`,
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -76,6 +77,7 @@ export default function Home() {
   downloadPageLink && (
     <div className="p-2 text-center">
   <DownloadFile downloadPageLink = {downloadPageLink} />
+    <EmailForm id={id} />
     <button className="w-44 my-5 p-3 bg-gray-800 rounded-lg focus:outline-none" onClick={resetComponent}>
     Upload New File
   </button>

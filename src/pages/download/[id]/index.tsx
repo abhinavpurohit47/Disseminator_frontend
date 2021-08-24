@@ -12,14 +12,12 @@ const index:NextPage <{
 
 const handleDownload = async() => {
   const { data } = await axios.get(
- `http://localhost:5000/api/files/${id}/download`,
+ `${process.env.NEXT_PUBLIC_API}/api/files/${id}/download`,
   {responseType : "blob",
 });
 
 fileDownload(data,name);
 }
-
-
 
   return <div className= "flex flex-col items-center justify-center py-3 space-y-4 bg-gray-900 rounded-xl shadow-lg w-96">
     {!id  ? 
@@ -48,7 +46,7 @@ export async function getServerSideProps(context:GetServerSidePropsContext){
   const { id } = context.query;  
   let file;
   try{
-  const {data} = await axios.get(`http://localhost:5000/api/files/${id}`)
+  const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API}/api/files/${id}`)
     file = data
 
 } catch(error){
