@@ -23,7 +23,7 @@ export default function Home() {
       const {data}  = await axios ({
         method:"post",
         data :formData,
-        url:"http://localhost:5000/api/files/upload",
+        url:`${process.env.NEXT_PUBLIC_API}/api/files/upload`,
         headers: {
           "Content-Type": "multipart/form-data",
         },
