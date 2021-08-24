@@ -22,7 +22,7 @@ fileDownload(data,name);
   return <div className= "flex flex-col items-center justify-center py-3 space-y-4 bg-gray-900 rounded-xl shadow-lg w-96">
     {!id  ? 
     <span>
-      oops! File does not exist! Check the URL
+      OOPS! File does not exist! Check the URL.
     </span> : <>
     
     <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 flex flex-row" viewBox="0 0 20 20" fill="currentColor">
