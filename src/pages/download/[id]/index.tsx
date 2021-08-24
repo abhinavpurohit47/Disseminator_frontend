@@ -12,7 +12,7 @@ const index:NextPage <{
 
 const handleDownload = async() => {
   const { data } = await axios.get(
- `${process.env.NEXT_PUBLIC_API}/api/files/${id}/download`,
+ `api/files/${id}/download`,
   {responseType : "blob",
 });
 
