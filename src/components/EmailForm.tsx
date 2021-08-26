@@ -14,7 +14,7 @@ const handleEmail = async(e) => {
     try{
     const {data} =  await axios({
             method:"POST",
-            url:"http://localhost:5000/api/files/email",
+            url:`${process.env.NEXT_PUBLIC_API}/api/files/email`,
             data:{
                 id,
                 emailFrom,
