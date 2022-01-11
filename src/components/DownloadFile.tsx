@@ -4,8 +4,8 @@ const DownloadFile = ({downloadPageLink}) => {
     return (
             <div className="p-1"> 
                 <h1 className="my-2 text-lg font-medium"> 
-Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni dolorum aperiam quidem possimus necessitatibus blanditiis. Neque perferendis excepturi id dignissimos repellat molestiae nihil vitae eius. Totam vel quos nisi aut.
-                </h1>
+        Your file is ready to be downloaded.
+         </h1>
             <div className="flex space-x-3">
             <span className="break-all">
                 {downloadPageLink}
